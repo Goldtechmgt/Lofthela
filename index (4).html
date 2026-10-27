@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lofthela.online | Global Affiliate & Learning Platform</title>
+    <meta name="description" content="Join lofthela.online, a modern global affiliate platform. Earn in your local currency, track in USD, access AI-powered learning, mentorship, and a thriving member marketplace.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lofthela.online/">
+    <meta property="og:title" content="lofthela.online | Global Affiliate & Learning Platform">
+    <meta property="og:description" content="Earn through tasks, learn from AI lessons, and access world-class mentorship. Launching soon!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lofthela.online/">
+    <meta property="twitter:title" content="lofthela.online | Global Affiliate & Learning Platform">
+    <meta property="twitter:description" content="Earn through tasks, learn from AI lessons, and access world-class mentorship. Launching soon!">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --navy-dark: #0A192F;
+            --navy-medium: #112240;
+            --navy-light: #233554;
+            --gold: #F59E0B;
+            --gold-hover: #D97706;
+            --gold-light: #FEF3C7;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--navy-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .brand-logo {
+            color: var(--gold);
+            font-size: 28px;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-logo span {
+            color: var(--text-light);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-btn {
+            background-color: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--gold);
+            color: var(--navy-dark);
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--text-light);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 80px;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(35, 53, 84, 0.3) 0%, rgba(10, 25, 47, 1) 70%);
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 24px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Countdown Widget */
+        .countdown-box {
+            background-color: var(--navy-medium);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .countdown-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .time-segment {
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .time-num {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--text-light);
+            display: block;
+            background: var(--navy-light);
+            border-radius: 8px;
+            padding: 10px 5px;
+            margin-bottom: 8px;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .time-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Dynamic Earnings Feature Intro */
+        .currency-preview {
+            background: linear-gradient(135deg, var(--navy-medium) 0%, var(--navy-light) 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 80px;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .currency-info {
+            flex: 1;
+        }
+
+        .badge {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: var(--gold);
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .currency-info h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .currency-info p {
+            color: var(--text-muted);
+        }
+
+        .mock-dashboard {
+            background: #020c1b;
+            border-radius: 12px;
+            padding: 24px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid rgba(245, 158, 11, 0.15);
+        }
+
+        .dash-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 12px;
+        }
+
+        .dash-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .toggle-container {
+            display: flex;
+            background: var(--navy-light);
+            padding: 4px;
+            border-radius: 6px;
+        }
+
+        .toggle-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 4px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .toggle-btn.active {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+
+        .stat-box {
+            margin-bottom: 16px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .stat-val {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        .task-list {
+            margin-top: 16px;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.02);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .task-name i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+
+        .task-payout {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Ecosystem Grid (Sections requested) */
+        .sections-grid {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 38px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 11fr);
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--navy-medium);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(245, 158, 11, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .card-icon {
+            font-size: 36px;
+            color: var(--gold);
+            margin-bottom: 24px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--text-light);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #020c1b;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        footer p {
+            margin-bottom: 16px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .socials a {
+            color: var(--text-muted);
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: var(--gold);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 42px; }
+            .currency-preview { flex-direction: column; text-align: center; }
+            .mock-dashboard { max-width: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--navy-medium);
+                padding: 24px;
+                border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">lofthela<span>.online</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#affiliate" class="nav-link">Affiliate</a></li>
+                <li><a href="#ai-learning" class="nav-link">AI Learning</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#mentorship" class="nav-link">Mentorship</a></li>
+                <li><a href="#marketplace" class="nav-link">Marketplace</a></li>
+            </ul>
+            <button class="nav-btn">Join Waitlist</button>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section & Countdown -->
+    <section class="hero">
+        <div class="container">
+            <span class="badge">Next Generation Affiliate Ecosystem</span>
+            <h1>Empowering Global Affiliates<br>Through <span>Knowledge & Tasks</span></h1>
+            <p>Welcome to lofthela.online. An ultra-modern, cross-border affiliate platform built to maximize your potential with tailored local earnings, smart machine lessons, and a direct digital marketplace.</p>
+            
+            <!-- Live Countdown -->
+            <div class="countdown-box">
+                <p class="countdown-title"><i class="fa-regular fa-clock"></i> Grand Launch Countdown (EAT)</p>
+                <div class="timer">
+                    <div class="time-segment">
+                        <span class="time-num" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-segment">
+                        <span class="time-num" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-segment">
+                        <span class="time-num" id="minutes">00</span>
+                        <span class="time-label">Mins</span>
+                    </div>
+                    <div class="time-segment">
+                        <span class="time-num" id="seconds">00</span>
+                        <span class="time-label">Secs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Currency Interactive Showcase -->
+    <section id="affiliate" class="container">
+        <div class="currency-preview">
+            <div class="currency-info">
+                <span class="badge"><i class="fa-solid fa-globe"></i> Global Currency Freedom</span>
+                <h2>Earn Locally. View Globally.</h2>
+                <p>No matter where you register across the world, your balance grows directly in your home currency. Need a universal benchmark? Instantly toggle your complete metrics screen to USD with a single tap. Complete tasks, claim diamonds, and track your success your way.</p>
+            </div>
+            
+            <!-- Dashboard Widget Demo -->
+            <div class="mock-dashboard">
+                <div class="dash-header">
+                    <span class="dash-title">Earnings Dashboard</span>
+                    <div class="toggle-container">
+                        <button class="toggle-btn active" id="btnLocal">Local</button>
+                        <button class="toggle-btn" id="btnUsd">USD</button>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Total Task Rewards</span>
+                    <div class="stat-val" id="earningsVal">KES 14,500</div>
+                </div>
+                <div class="task-list">
+                    <div class="task-item">
+                        <span class="task-name"><i class="fa-solid fa-gem"></i> Social Amplification Task</span>
+                        <span class="task-payout" id="task1">KES 350</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-name"><i class="fa-solid fa-gem"></i> Market Review Survey</span>
+                        <span class="task-payout" id="task2">KES 800</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Vision Ecosystem Sections Grid -->
+    <section class="container sections-grid">
+        <div class="section-header">
+            <h2>The Five Pillars of lofthela.online</h2>
+            <p>An all-in-one suite merging task automation, customized global finance tracking, and interactive skill-building blocks.</p>
+        </div>
+        
+        <div class="grid">
+            <!-- AI Learning -->
+            <div class="card" id="ai-learning">
+                <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                <h3>AI Learning Matrix</h3>
+                <p>Say goodbye to static, boring tutorial PDFs. We are developing an integrated, automated coaching model designed to deliver dynamic lessons based entirely on your platform activity and goal trajectory.</p>
+                <span class="card-link">Adaptive Modules Coming Soon <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+
+            <!-- Online Courses -->
+            <div class="card" id="courses">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>Structured Online Academy</h3>
+                <p>Unlock structured pathing built to take you from a curious novice to an authority-level marketer. Gain immediate clarity over high-income skill development, funnel assembly, and digital asset management.</p>
+                <span class="card-link">Explore Curriculum Vision <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+
+            <!-- Mentorship -->
+            <div class="card" id="mentorship">
+                <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>Peer Mentorship Circles</h3>
+                <p>Connect instantly with dedicated branch leaders and global compounding teams. Participate in live masterminds, peer reviews, and real-time strategic alignment inside our upcoming private networking hub.</p>
+                <span class="card-link">Join the Inner Circle <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+
+            <!-- Marketplace -->
+            <div class="card" id="marketplace">
+                <div class="card-icon"><i class="fa-solid fa-shop"></i></div>
+                <h3>Member-Driven Marketplace</h3>
+                <p>A unified arena where users can directly showcase, barter, or monetize digital configurations, custom scripts, content templates, and value-added resources directly to other global members.</p>
+                <span class="card-link">View Proposed Structure <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 lofthela.online. All Rights Reserved. Built with precision for global growth.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Countdown & Dashboard Logic Scripts -->
+    <script>
+        // --- Countdown Timer Logic (Target: Nov 7, 2026, 14:00:00 East Africa Time / UTC+3) ---
+        // 2:00 PM EAT is 11:00 AM UTC
+        const targetDate = new Date(Date.UTC(2026, 10, 7, 11, 0, 0)).getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                document.getElementById('days').innerText = "00";
+                document.getElementById('hours').innerText = "00";
+                document.getElementById('minutes').innerText = "00";
+                document.getElementById('seconds').innerText = "00";
+                clearInterval(countdownInterval);
+                return;
+            }
+
+            const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(d).padStart(2, '0');
+            document.getElementById('hours').innerText = String(h).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(m).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(s).padStart(2, '0');
+        }
+        
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        // --- Interactive Mock Dashboard Currency Toggle ---
+        const btnLocal = document.getElementById('btnLocal');
+        const btnUsd = document.getElementById('btnUsd');
+        const earningsVal = document.getElementById('earningsVal');
+        const task1 = document.getElementById('task1');
+        const task2 = document.getElementById('task2');
+
+        btnLocal.addEventListener('click', () => {
+            btnLocal.classList.add('active');
+            btnUsd.classList.remove('active');
+            earningsVal.innerText = "KES 14,500";
+            task1.innerText = "KES 350";
+            task2.innerText = "KES 800";
+        });
+
+        btnUsd.addEventListener('click', () => {
+            btnUsd.classList.add('active');
+            btnLocal.classList.remove('active');
+            earningsVal.innerText = "$111.54";
+            task1.innerText = "$2.69";
+            task2.innerText = "$6.15";
+        });
+
+        // --- Mobile Responsive Navigation Menu Toggle ---
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
