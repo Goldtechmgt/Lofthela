@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lofthela.online | Next-Gen Global Affiliate & Micro-Task Platform</title>
+    
+    <!-- Basic SEO Metadata -->
+    <meta name="description" content="Earn money globally in your local currency or USD through watching videos, playing chess, taking surveys, and completing micro-tasks. Join the lofthela ecosystem today. Managed by Goldtech Management.">
+    <meta name="keywords" content="affiliate platform, earn money online, play chess for money, watch tiktok ads, weekly bonus, goldtech, lofthela">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lofthela.online/">
+    <meta property="og:title" content="lofthela.online | Global Earning & Affiliate Ecosystem">
+    <meta property="og:description" content="Earn globally, track in USD, cash out weekly. Watch videos, play games, read novels, and maximize your revenue channels.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lofthela.online/">
+    <meta property="twitter:title" content="lofthela.online | Global Earning & Affiliate Ecosystem">
+    <meta property="twitter:description" content="Earn globally, track in USD, cash out weekly. Watch videos, play games, read novels, and maximize your revenue channels.">
+    
+    <!-- Embedded Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A192F'/%3E%3Cpath d='M30 70 L50 30 L70 70 Z' fill='none' stroke='%23F59E0B' stroke-width='8' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='45' r='6' fill='%2334D399'/%3E%3C/svg%3E">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            light: '#172A45',
+                            DEFAULT: '#0A192F',
+                            dark: '#020C1B',
+                            card: '#112240'
+                        },
+                        gold: {
+                            light: '#FCD34D',
+                            DEFAULT: '#F59E0B',
+                            dark: '#D97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0A192F; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #F59E0B; border-radius: 3px; }
+        .glow-gold { box-shadow: 0 0 15px rgba(245, 158, 11, 0.2); }
+        .modal-active { opacity: 1; pointer-events: auto; }
+    </style>
+</head>
+<body class="bg-navy text-gray-200 font-sans selection:bg-gold selection:text-navy overflow-x-hidden">
+
+    <!-- Global Navigation -->
+    <nav class="sticky top-0 z-40 bg-navy/95 backdrop-blur border-b border-navy-light px-4 lg:px-8 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center space-x-2 text-2xl font-serif font-bold text-gold tracking-wide">
+            <span>💎 lofthela<span class="text-white text-sm font-sans font-light">.online</span></span>
+        </a>
+        <div class="hidden md:flex items-center space-x-6 text-sm font-medium tracking-wide">
+            <a href="#dashboard" class="hover:text-gold transition">Dashboard</a>
+            <a href="#tasks" class="hover:text-gold transition">Earning Tasks</a>
+            <a href="#vision" class="hover:text-gold transition">Ecosystem</a>
+            <a href="#bonus" class="hover:text-gold transition">Weekly Bonus</a>
+            <a href="#faq" class="hover:text-gold transition">FAQs</a>
+        </div>
+        <div class="flex items-center space-x-3">
+            <button onclick="openModal('login')" class="px-4 py-2 border border-gold text-gold hover:bg-gold hover:text-navy text-xs lg:text-sm font-semibold rounded transition">Log In</button>
+            <button onclick="openModal('register')" class="px-4 py-2 bg-gold text-navy hover:bg-gold-light text-xs lg:text-sm font-semibold rounded shadow glow-gold transition">Register</button>
+        </div>
+    </nav>
+
+    <!-- Hero / Launch Tracker Section -->
+    <header class="relative bg-gradient-to-b from-navy via-navy to-navy-card py-16 px-4 lg:px-8 text-center max-w-7xl mx-auto">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        <span class="inline-block px-4 py-1.5 bg-navy-light text-gold text-xs font-bold uppercase tracking-widest rounded-full mb-6 border border-gold/20">Global Launch Countdown</span>
+        <h1 class="text-4xl md:text-6xl font-serif text-white font-bold mb-6 leading-tight">
+            The Ultimate Global Affiliate & <br><span class="text-gold italic">Micro-Task Revolution</span>
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-base md:text-lg mb-10">
+            Earn rewards in your own local currency, access real-time conversion insights in USD, and multiply your weekly payouts through state-of-the-art interactive modules.
+        </p>
+
+        <!-- Live Countdown Widget -->
+        <div id="countdown" class="grid grid-cols-4 gap-2 md:gap-4 max-w-xl mx-auto mb-12">
+            <div class="bg-navy-card border border-navy-light p-4 rounded-xl shadow-lg">
+                <span id="days" class="block text-2xl md:text-4xl font-bold text-gold">00</span>
+                <span class="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider font-semibold">Days</span>
+            </div>
+            <div class="bg-navy-card border border-navy-light p-4 rounded-xl shadow-lg">
+                <span id="hours" class="block text-2xl md:text-4xl font-bold text-gold">00</span>
+                <span class="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider font-semibold">Hours</span>
+            </div>
+            <div class="bg-navy-card border border-navy-light p-4 rounded-xl shadow-lg">
+                <span id="minutes" class="block text-2xl md:text-4xl font-bold text-gold">00</span>
+                <span class="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider font-semibold">Minutes</span>
+            </div>
+            <div class="bg-navy-card border border-navy-light p-4 rounded-xl shadow-lg">
+                <span id="seconds" class="block text-2xl md:text-4xl font-bold text-gold">00</span>
+                <span class="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider font-semibold">Seconds</span>
+            </div>
+        </div>
+        <p class="text-xs text-gray-500 -mt-6">Target Date: November 7, 2026, 2:00 PM East Africa Time (EAT)</p>
+    </header>
+
+    <!-- Simulated Interactive Live Dashboard Area -->
+    <section id="dashboard" class="max-w-7xl mx-auto px-4 lg:px-8 py-12 scroll-mt-20">
+        <div class="bg-navy-card border border-navy-light rounded-2xl p-6 lg:p-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full filter blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-navy-light pb-6 mb-6 gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-gold"></i> Live Global Account Hub
+                    </h2>
+                    <p class="text-xs text-gray-400 mt-1">Simulate conversion metrics, rates, and wallet balances</p>
+                </div>
+                
+                <!-- Dynamic Conversion Rate Tool Configuration controls -->
+                <div class="bg-navy bg-opacity-50 p-2 rounded-xl border border-navy-light flex flex-wrap items-center gap-3">
+                    <div class="flex items-center space-x-2">
+                        <label class="text-xs text-gray-400 font-medium">Select Currency:</label>
+                        <select id="currencySelect" onchange="updateDashboardView()" class="bg-navy-card border border-navy-light text-gold text-xs rounded px-2 py-1 focus:outline-none focus:border-gold">
+                            <option value="KES" data-rate="130.00" data-symbol="KES ">KES (Kenya Shilling)</option>
+                            <option value="NGN" data-rate="1600.00" data-symbol="₦ ">NGN (Nigeria Naira)</option>
+                            <option value="GHS" data-rate="15.50" data-symbol="GH₵ ">GHS (Ghana Cedi)</option>
+                            <option value="ZAR" data-rate="18.20" data-symbol="R ">ZAR (South Africa Rand)</option>
+                            <option value="INR" data-rate="83.50" data-symbol="₹ ">INR (India Rupee)</option>
+                            <option value="PHP" data-rate="56.20" data-symbol="₱ ">PHP (Philippine Peso)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="flex items-center space-x-1 border-l border-navy-light pl-3">
+                        <label class="text-xs text-gray-400 font-medium">Rate / $1:</label>
+                        <input type="number" id="customRateInput" value="130.00" oninput="handleCustomRateChange()" class="w-16 bg-navy-card border border-navy-light text-center text-white text-xs rounded py-0.5 focus:outline-none focus:border-gold">
+                    </div>
+
+                    <div class="flex items-center bg-navy rounded-lg p-0.5 border border-navy-light ml-2">
+                        <button id="toggleDisplayLocal" onclick="setDisplayMode('local')" class="px-3 py-1 text-xs rounded font-medium bg-gold text-navy transition">Local Currency</button>
+                        <button id="toggleDisplayUSD" onclick="setDisplayMode('usd')" class="px-3 py-1 text-xs rounded font-medium text-gray-400 hover:text-white transition">USD ($)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Metric Grid Rows -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-navy p-5 rounded-xl border border-navy-light">
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider block">Available Balance</span>
+                    <span id="valBalance" class="text-2xl font-bold text-white block mt-2">KES 15,600.00</span>
+                    <span id="subBalance" class="text-xs text-gray-500 block mt-1">($120.00 USD equivalent)</span>
+                </div>
+                <div class="bg-navy p-5 rounded-xl border border-navy-light">
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider block">Today's Task Earnings</span>
+                    <span id="valTask" class="text-2xl font-bold text-emerald-400 block mt-2">KES 4,550.00</span>
+                    <span id="subTask" class="text-xs text-gray-500 block mt-1">($35.00 USD equivalent)</span>
+                </div>
+                <div class="bg-navy p-5 rounded-xl border border-navy-light">
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider block">Affiliate Commissions</span>
+                    <span id="valAffiliate" class="text-2xl font-bold text-gold block mt-2">KES 8,450.00</span>
+                    <span id="subAffiliate" class="text-xs text-gray-500 block mt-1">($65.00 USD equivalent)</span>
+                </div>
+                <div class="bg-navy p-5 rounded-xl border border-navy-light">
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider block">Est. Sunday Pay Bonus</span>
+                    <span id="valBonus" class="text-2xl font-bold text-indigo-400 block mt-2">KES 2,600.00</span>
+                    <span id="subBonus" class="text-xs text-gray-500 block mt-1">(+20% Active Multiplier)</span>
+                </div>
+            </div>
+
+            <!-- Dynamic Micro-Alert Notice -->
+            <div class="mt-6 flex flex-col sm:flex-row sm:items-center justify-between bg-gold/5 border border-gold/20 p-4 rounded-xl gap-3">
+                <div class="flex items-center space-x-3">
+                    <span class="flex h-3 w-3 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-gold"></span>
+                    </span>
+                    <p class="text-xs text-gray-300">
+                        <strong class="text-gold">Live Exchange Matrix:</strong> Modifying the target currency dropdown or adjusting rates updates all fields seamlessly.
+                    </p>
+                </div>
+                <a href="#tasks" class="text-xs text-gold hover:underline font-semibold whitespace-nowrap">Explore Earning Vectors &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Earning Features Task System -->
+    <section id="tasks" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 scroll-mt-20">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-3xl font-serif text-white font-bold mb-4">Diversified High-Yield Earning Pipelines</h2>
+            <p class="text-gray-400 text-sm">Monetize your daily online actions through clear, structured media tasks, classic game tournaments, and social knowledge tracking.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-navy-card rounded-xl border border-navy-light overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80" alt="Watch Videos" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Video Streams</span>
+                    <h3 class="text-lg font-bold text-white mb-2">TikTok & YouTube Views</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Earn solid dividends simply by streaming designated partner video clips and channel sponsors.</p>
+                    <button onclick="openModal('register')" class="w-full text-center py-2 bg-navy border border-navy-light rounded text-xs font-semibold text-gray-300 hover:text-gold hover:border-gold transition">Start Streaming</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-navy-card rounded-xl border border-navy-light overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Answering Questions" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Intelligence</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Answering Questions</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Provide consumer opinions and simple answers to targeted localized market questionnaires.</p>
+                    <button onclick="openModal('register')" class="w-full text-center py-2 bg-navy border border-navy-light rounded text-xs font-semibold text-gray-300 hover:text-gold hover:border-gold transition">Open Surveys</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-navy-card rounded-xl border border-navy-light overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Chatting Global" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Social Hub</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Foreigner Chat Portals</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Engage in cross-border language support and conversational chats with global platform users.</p>
+                    <button onclick="openModal('register')" class="w-full text-center py-2 bg-navy border border-navy-light rounded text-xs font-semibold text-gray-300 hover:text-gold hover:border-gold transition">Join Chatroom</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-navy-card rounded-xl border border-navy-light overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=600&q=80" alt="Draft and Chess" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Skill Matches</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Draft & Chess Matches</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Challenge global players to Draft or Chess matches and stake claims on verified balance prizes.</p>
+                    <button onclick="openModal('register')" class="w-full text-center py-2 bg-navy border border-navy-light rounded text-xs font-semibold text-gray-300 hover:text-gold hover:border-gold transition">Enter Arena</button>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-navy-card rounded-xl border border-navy-light overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=600&q=80" alt="Spinning Wheels" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Lucky Wheels</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Daily Token Spinning</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Spin the premium prize wheel daily to unlock instant modifiers, gifts, or currency bonuses.</p>
+                    <button onclick="openModal('register')" class="w-full text-center py-2 bg-navy border border-navy-light rounded text-xs font-semibold text-gray-300 hover:text-gold hover:border-gold transition">Claim Daily Spin</button>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-navy-card rounded-xl border border-navy-light overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Clicking Ads" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Paid Campaigns</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Click Advertising Ads</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Interact with digital advertisements and visit micro-campaign sites for swift payout updates.</p>
+                    <button onclick="openModal('register')" class="w-full text-center py-2 bg-navy border border-navy-light rounded text-xs font-semibold text-gray-300 hover:text-gold hover:border-gold transition">Browse Ad Wall</button>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="bg-navy-card rounded-xl border border-navy-light overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="Reading Novels" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Literature</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Reading Serial Novels</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Read sponsored short stories, serialized books, and novels to qualify for time-based payouts.</p>
+                    <button onclick="openModal('register')" class="w-full text-center py-2 bg-navy border border-navy-light rounded text-xs font-semibold text-gray-300 hover:text-gold hover:border-gold transition">Open Library</button>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="bg-navy-card rounded-xl border border-navy-light overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80" alt="Affiliate System" class="w-full h-44 object-cover">
+                <div class="p-5">
+                    <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Affiliates</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Multi-Tier Network</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Earn compounding commissions from invitees down the line when they finalize daily tasks.</p>
+                    <button onclick="openModal('register')" class="w-full text-center py-2 bg-navy border border-navy-light rounded text-xs font-semibold text-gray-300 hover:text-gold hover:border-gold transition">Generate Invite Link</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Performance Sunday Pay Bonus Section -->
+    <section id="bonus" class="bg-navy-card border-t border-b border-navy-light py-16 px-4 lg:px-8 scroll-mt-20">
+        <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="max-w-xl">
+                <span class="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider rounded-md border border-indigo-500/20 mb-3 inline-block">Weekly Premium Multiplier 🤞</span>
+                <h2 class="text-3xl font-serif text-white font-bold mb-4">Sunday Pay Bonus Matrix</h2>
+                <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                    Maintain high activity velocity throughout the week to activate your Sunday reward multiplier. Users completing tasks daily are awarded a premium bonus addition directly added into their withdrawable wallet balances every Sunday at midnight.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-navy p-4 rounded-lg border border-navy-light">
+                        <span class="text-xs text-gray-400 block">Active Status Multiplier</span>
+                        <span class="text-xl font-bold text-gold mt-1 block">+20% Bonus</span>
+                    </div>
+                    <div class="bg-navy p-4 rounded-lg border border-navy-light">
+                        <span class="text-xs text-gray-400 block">Next Distribution Cycle</span>
+                        <span class="text-xl font-bold text-white mt-1 block">Every Sunday</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-navy border border-navy-light p-6 rounded-2xl w-full lg:w-96 glow-gold">
+                <h3 class="text-base font-semibold text-white mb-4 border-b border-navy-light pb-3">Bonus Track Progress</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="text-gray-400">Weekly Task Velocity</span>
+                            <span class="text-gold font-bold">85% Achieved</span>
+                        </div>
+                        <div class="w-full bg-navy-card h-2 rounded-full overflow-hidden">
+                            <div class="bg-gold h-full rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="text-gray-400">Network Referrals Milestone</span>
+                            <span class="text-emerald-400 font-bold">100% Completed</span>
+                        </div>
+                        <div class="w-full bg-navy-card h-2 rounded-full overflow-hidden">
+                            <div class="bg-emerald-400 h-full rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-navy-light flex items-center justify-between">
+                        <span class="text-xs text-gray-400">Qualified Sunday Payout:</span>
+                        <span class="text-sm font-bold text-white bg-navy-light px-2 py-1 rounded">Active Status ✅</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Future Vision Hub -->
+    <section id="vision" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 scroll-mt-20">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-serif text-white font-bold mb-4">Platform Roadmap & Learning Ecosystem</h2>
+            <p class="text-gray-400 text-sm">We are weaving monetization together with core skills development. Review our planned structural expansion modules below.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Box 1 -->
+            <div class="bg-navy-card p-6 lg:p-8 rounded-2xl border border-navy-light flex gap-4">
+                <div class="text-gold text-3xl shrink-0"><i class="fa-solid fa-robot"></i></div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-2">🤖 Intelligent AI Learning Lessons</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Upcoming modules featuring automated tutorials, code scripts, localized language assistance, and advanced prompt engineering parameters to transform you into an expert micro-task performer.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="bg-navy-card p-6 lg:p-8 rounded-2xl border border-navy-light flex gap-4">
+                <div class="text-gold text-3xl shrink-0"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-2">🎓 Structured Academy & Courses</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Comprehensive skill certification tracks mapping online content marketing, visual asset editing, remote freelance management, and systematic network growth strategy formulation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="bg-navy-card p-6 lg:p-8 rounded-2xl border border-navy-light flex gap-4">
+                <div class="text-gold text-3xl shrink-0"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-2">🤝 Peer Mentorship Communities</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Interactive internal circles linking new members directly with seasoned top earners to optimize their task completion metrics, strategy plans, and payout scaling processes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="bg-navy-card p-6 lg:p-8 rounded-2xl border border-navy-light flex gap-4">
+                <div class="text-gold text-3xl shrink-0"><i class="fa-solid fa-shop"></i></div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-2">🛍️ Member-Driven Marketplace</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        A proposed internal trade square enabling verified members to purchase digital items, account premium modifications, course vouchers, and advertising inventory spaces using earned balances.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verified User Testimonials Section -->
+    <section class="bg-navy-card/50 py-16 border-t border-navy-light">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-serif text-white font-bold mb-4">Success Reports From Our Network</h2>
+                <p class="text-gray-400 text-sm">Real reviews and statements from members who successfully transformed their digital activity into active currency rewards.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-navy p-6 rounded-xl border border-navy-light flex flex-col justify-between">
+                    <p class="text-xs text-gray-300 italic leading-relaxed">
+                        "The ability to toggle the dashboard display between KES and USD makes managing my task strategy incredibly intuitive. I cashed out my first major video streaming reward last Sunday without structural delays. Big thanks to the lofthela team!"
+                    </p>
+                    <div class="mt-6 flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-between text-xs font-bold text-gold justify-center">AM</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Amara M.</h4>
+                            <span class="text-[10px] text-emerald-400">Verified Member</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-navy p-6 rounded-xl border border-navy-light flex flex-col justify-between">
+                    <p class="text-xs text-gray-300 italic leading-relaxed">
+                        "Playing Chess matches and getting actual balance rewards is something I hadn't seen elsewhere. The weekly Sunday Pay Bonus multiplier kept me focused. Managed by Goldtech Management, the professionalism stands out clearly."
+                    </p>
+                    <div class="mt-6 flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-between text-xs font-bold text-gold justify-center">DK</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">David K.</h4>
+                            <span class="text-[10px] text-emerald-400">Premium Earner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-navy p-6 rounded-xl border border-navy-light flex flex-col justify-between">
+                    <p class="text-xs text-gray-300 italic leading-relaxed">
+                        "Completing localized surveys and interacting with foreigner chat rooms has opened an excellent revenue stream for me. Toggling currency view settings lets me see exactly how my local earnings match global metrics."
+                    </p>
+                    <div class="mt-6 flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-between text-xs font-bold text-gold justify-center">SN</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Sophia N.</h4>
+                            <span class="text-[10px] text-emerald-400">Affiliate Leader</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive FAQ Accordion Area -->
+    <section id="faq" class="max-w-4xl mx-auto px-4 py-16 scroll-mt-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-serif text-white font-bold mb-4">Frequently Answered Queries</h2>
+            <p class="text-gray-400 text-sm">Clear insights regarding balances, operations, and account infrastructure configurations.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="bg-navy-card border border-navy-light rounded-xl overflow-hidden">
+                <button onclick="toggleFaq(1)" class="w-full text-left p-5 font-semibold text-white flex justify-between items-center hover:bg-navy transition text-sm sm:text-base">
+                    <span>How does the dual-currency dashboard system process conversions?</span>
+                    <i id="faq-icon-1" class="fa-solid fa-chevron-down text-gold transition-transform"></i>
+                </button>
+                <div id="faq-ans-1" class="hidden p-5 border-t border-navy-light bg-navy/40 text-xs sm:text-sm text-gray-400 leading-relaxed">
+                    The platform records all your accrued micro-task values and affiliate network gains directly in your targeted local currency options. The live dashboard includes an interactive conversion switch that recalculates metrics against the baseline US Dollar exchange parameters instantly.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-navy-card border border-navy-light rounded-xl overflow-hidden">
+                <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-semibold text-white flex justify-between items-center hover:bg-navy transition text-sm sm:text-base">
+                    <span>What criteria determines qualification for the Sunday Pay Bonus?</span>
+                    <i id="faq-icon-2" class="fa-solid fa-chevron-down text-gold transition-transform"></i>
+                </button>
+                <div id="faq-ans-2" class="hidden p-5 border-t border-navy-light bg-navy/40 text-xs sm:text-sm text-gray-400 leading-relaxed">
+                    The Sunday Pay Bonus is structured to incentivize consistent member activity. By maintaining task completion momentum across elements like ad clicks, game plays, or video views throughout the weekly cycle, your wallet applies an extra percentage payout modifier on Sunday nights.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-navy-card border border-navy-light rounded-xl overflow-hidden">
+                <button onclick="toggleFaq(3)" class="w-full text-left p-5 font-semibold text-white flex justify-between items-center hover:bg-navy transition text-sm sm:text-base">
+                    <span>Are Chess and Draft tournament rewards distributed immediately?</span>
+                    <i id="faq-icon-3" class="fa-solid fa-chevron-down text-gold transition-transform"></i>
+                </button>
+                <div id="faq-ans-3" class="hidden p-5 border-t border-navy-light bg-navy/40 text-xs sm:text-sm text-gray-400 leading-relaxed">
+                    Yes. When matches conclude successfully in the platform game arena, the winner validation mechanisms check calculations and update the member dashboard available balance container within moments, allowing immediate usage.
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-navy-card border border-navy-light rounded-xl overflow-hidden">
+                <button onclick="toggleFaq(4)" class="w-full text-left p-5 font-semibold text-white flex justify-between items-center hover:bg-navy transition text-sm sm:text-base">
+                    <span>Who directs the strategic roadmap of lofthela.online?</span>
+                    <i id="faq-icon-4" class="fa-solid fa-chevron-down text-gold transition-transform"></i>
+                </button>
+                <div id="faq-ans-4" class="hidden p-5 border-t border-navy-light bg-navy/40 text-xs sm:text-sm text-gray-400 leading-relaxed">
+                    The platform architectures, security updates, payment matrix pipelines, and proposed AI lesson courses are wholly directed by Goldtech Management to guarantee stable uptime performance parameters globally.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Communication Hub & Official Interaction Portal -->
+    <section id="contact" class="max-w-5xl mx-auto px-4 py-12 mb-16 scroll-mt-20">
+        <div class="bg-gradient-to-r from-navy-card to-navy border border-navy-light p-8 rounded-2xl shadow-xl text-center relative overflow-hidden">
+            <div class="absolute -bottom-10 -left-10 w-44 h-44 bg-gold/5 rounded-full filter blur-2xl pointer-events-none"></div>
+            
+            <h2 class="text-2xl font-serif text-white font-bold mb-4">Official Channels & Support Node</h2>
+            <p class="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto mb-8">
+                Connect directly with the operational management desk, track announcement feeds, or link with community structures using the verified triggers below.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <!-- Gmail Button -->
+                <a href="mailto:Goldtechmgt@gmail.com" class="flex flex-col items-center justify-center p-4 bg-navy rounded-xl border border-navy-light hover:border-red-500 transition group">
+                    <span class="text-2xl text-gray-400 group-hover:text-red-500 transition mb-2"><i class="fa-solid fa-envelope"></i></span>
+                    <span class="text-xs font-bold text-white block">Email Support</span>
+                    <span class="text-[9px] text-gray-500 mt-1">Goldtechmgt@gmail.com</span>
+                </a>
+
+                <!-- YouTube Button -->
+                <a href="https://youtube.com/@lofthela" target="_blank" class="flex flex-col items-center justify-center p-4 bg-navy rounded-xl border border-navy-light hover:border-red-600 transition group">
+                    <span class="text-2xl text-gray-400 group-hover:text-red-600 transition mb-2"><i class="fa-brands fa-youtube"></i></span>
+                    <span class="text-xs font-bold text-white block">YouTube Hub</span>
+                    <span class="text-[9px] text-gray-500 mt-1">Subscribe Channel</span>
+                </a>
+
+                <!-- Telegram Button -->
+                <a href="https://t.me/lofthela_chat" target="_blank" class="flex flex-col items-center justify-center p-4 bg-navy rounded-xl border border-navy-light hover:border-sky-400 transition group">
+                    <span class="text-2xl text-gray-400 group-hover:text-sky-400 transition mb-2"><i class="fa-brands fa-telegram"></i></span>
+                    <span class="text-xs font-bold text-white block">Telegram Chat</span>
+                    <span class="text-[9px] text-gray-500 mt-1">Global Community</span>
+                </a>
+
+                <!-- WhatsApp Channel Button -->
+                <a href="https://whatsapp.com/channel/lofthela" target="_blank" class="flex flex-col items-center justify-center p-4 bg-navy rounded-xl border border-navy-light hover:border-green-400 transition group">
+                    <span class="text-2xl text-gray-400 group-hover:text-green-400 transition mb-2"><i class="fa-brands fa-whatsapp"></i></span>
+                    <span class="text-xs font-bold text-white block">WA Feed Channel</span>
+                    <span class="text-[9px] text-gray-500 mt-1">Announcements Stream</span>
+                </a>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-navy-light">
+                <a href="#dashboard" class="inline-block px-6 py-2.5 bg-gold text-navy font-bold rounded-lg text-xs hover:bg-gold-light transition shadow glow-gold">
+                    Visit Website Info Dashboard Hub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="bg-navy-dark border-t border-navy-light text-gray-500 py-12 px-4 text-center text-xs">
+        <div class="max-w-7xl mx-auto space-y-4">
+            <p class="font-serif text-gold text-base font-bold">💎 lofthela.online</p>
+            <p class="max-w-md mx-auto leading-relaxed">
+                Platform metrics, rules frameworks, registration components, and technical updates managed by <strong class="text-gray-400">Goldtech Management</strong>. All global rights reserved &copy; 2026.
+            </p>
+            <div class="flex items-center justify-center space-x-6 pt-2">
+                <a href="#dashboard" class="hover:text-gold transition">Live System Hub</a>
+                <a href="#tasks" class="hover:text-gold transition">Earning Systems</a>
+                <a href="#vision" class="hover:text-gold transition">Roadmap Vision</a>
+                <a href="mailto:Goldtechmgt@gmail.com" class="hover:text-gold transition">Direct Desk</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Persistent Floating WhatsApp Core Support Button -->
+    <a href="https://wa.me/254700000000?text=Hello%20lofthela%20Support%20Ecosystem%20-%20Requesting%20Platform%20Details" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transform transition flex items-center justify-center text-2xl group animate-bounce"
+       title="Contact Support Desk via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-14 bg-navy-card border border-navy-light text-white text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap shadow-lg">Chat Support Active</span>
+    </a>
+
+    <!-- CUSTOM REGISTRATION & LOGIN MODAL WINDOWS (POP-UPS) -->
+    <div id="authModal" class="fixed inset-0 z-50 overflow-y-auto bg-navy/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-navy-card border border-navy-light rounded-2xl w-full max-w-md p-6 lg:p-8 shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalCard">
+            
+            <!-- Close Trigger -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Dynamic Modal Content Containers -->
+            <div id="modalTypeLogin" class="hidden">
+                <h3 class="text-2xl font-serif font-bold text-white mb-2">Welcome Back</h3>
+                <p class="text-xs text-gray-400 mb-6">Log into your secure global task panel to resume tracking payouts.</p>
+                
+                <form onsubmit="handleAuthSubmit(event, 'login')" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Registered Email</label>
+                        <input type="email" required placeholder="name@domain.com" class="w-full bg-navy border border-navy-light rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-gold transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Password</label>
+                        <input type="password" required placeholder="••••••••" class="w-full bg-navy border border-navy-light rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-gold transition">
+                    </div>
+                    <div class="flex justify-between items-center text-xs">
+                        <label class="flex items-center space-x-2 text-gray-400 cursor-pointer">
+                            <input type="checkbox" class="rounded accent-gold">
+                            <span>Keep me active</span>
+                        </label>
+                        <a href="#" class="text-gold hover:underline">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="w-full py-2.5 bg-gold text-navy font-bold rounded-lg text-sm hover:bg-gold-light transition shadow glow-gold mt-2">
+                        Access Secure Dashboard
+                    </button>
+                </form>
+                <div class="mt-6 pt-4 border-t border-navy-light text-center text-xs text-gray-400">
+                    New to lofthela? <button onclick="openModal('register')" class="text-gold font-bold hover:underline ml-1">Create an account here</button>
+                </div>
+            </div>
+
+            <div id="modalTypeRegister" class="hidden">
+                <h3 class="text-2xl font-serif font-bold text-white mb-2">Create Global Account</h3>
+                <p class="text-xs text-gray-400 mb-6">Start earning in your local currency. Fast setup via Goldtech portals.</p>
+                
+                <form onsubmit="handleAuthSubmit(event, 'register')" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Full Name</label>
+                            <input type="text" required placeholder="John Doe" class="w-full bg-navy border border-navy-light rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-gold transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Target Country</label>
+                            <select id="modalCountrySelect" onchange="syncModalToDashboardCurrency()" class="w-full bg-navy border border-navy-light rounded-lg px-3 py-2 text-sm text-gold focus:outline-none focus:border-gold transition">
+                                <option value="KES">Kenya</option>
+                                <option value="NGN">Nigeria</option>
+                                <option value="GHS">Ghana</option>
+                                <option value="ZAR">South Africa</option>
+                                <option value="INR">India</option>
+                                <option value="PHP">Philippines</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Email Address</label>
+                        <input type="email" required placeholder="john@example.com" class="w-full bg-navy border border-navy-light rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-gold transition">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Password</label>
+                            <input type="password" required placeholder="••••••••" class="w-full bg-navy border border-navy-light rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-gold transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Confirm</label>
+                            <input type="password" required placeholder="••••••••" class="w-full bg-navy border border-navy-light rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-gold transition">
+                        </div>
+                    </div>
+                    <div class="text-[11px] text-gray-400 leading-relaxed">
+                        <label class="flex items-start space-x-2 cursor-pointer">
+                            <input type="checkbox" required class="rounded accent-gold mt-0.5 shrink-0">
+                            <span>I explicitly agree to terms of activity, weekly verification cycles, and Goldtech operations structures.</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full py-2.5 bg-gold text-navy font-bold rounded-lg text-sm hover:bg-gold-light transition shadow glow-gold mt-2">
+                        Finalize Platform Registration
+                    </button>
+                </form>
+                <div class="mt-6 pt-4 border-t border-navy-light text-center text-xs text-gray-400">
+                    Already a member? <button onclick="openModal('login')" class="text-gold font-bold hover:underline ml-1">Log into dashboard</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Active Platform Script Systems -->
+    <script>
+        // Live Countdown Logic Target parameters (Nov 7, 2026, 2:00 PM EAT -> UTC+3)
+        const targetUtc = new Date(Date.UTC(2026, 10, 7, 11, 0, 0)).getTime(); // Month index 10 is November
+
+        function runCountdown() {
+            const now = new Date().getTime();
+            const difference = targetUtc - now;
+
+            if (difference <= 0) {
+                document.getElementById('countdown').innerHTML = "<div class='col-span-4 text-center text-xl font-bold text-emerald-400 bg-navy p-4 rounded border border-navy-light'>Platform Deployment & Active Task Systems are officially Live!</div>";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+        setInterval(runCountdown, 1000);
+        runCountdown();
+
+        // Baseline Mock Payout Constants in USD
+        const baseValuesUSD = {
+            balance: 120.00,
+            task: 35.00,
+            affiliate: 65.00,
+            bonus: 20.00
+        };
+
+        let currentDisplayMode = 'local'; // 'local' or 'usd'
+
+        // Synchronize dropdown menu logic to match user inputs
+        function updateDashboardView() {
+            const selectEl = document.getElementById('currencySelect');
+            const selectedOpt = selectEl.options[selectEl.selectedIndex];
+            const rate = parseFloat(selectedOpt.getAttribute('data-rate'));
+            
+            // Set the inline text rate field value
+            document.getElementById('customRateInput').value = rate.toFixed(2);
+            renderDashboardMetrics();
+        }
+
+        function handleCustomRateChange() {
+            renderDashboardMetrics();
+        }
+
+        function setDisplayMode(mode) {
+            currentDisplayMode = mode;
+            const localBtn = document.getElementById('toggleDisplayLocal');
+            const usdBtn = document.getElementById('toggleDisplayUSD');
+
+            if (mode === 'usd') {
+                usdBtn.className = "px-3 py-1 text-xs rounded font-medium bg-gold text-navy transition";
+                localBtn.className = "px-3 py-1 text-xs rounded font-medium text-gray-400 hover:text-white transition";
+            } else {
+                localBtn.className = "px-3 py-1 text-xs rounded font-medium bg-gold text-navy transition";
+                usdBtn.className = "px-3 py-1 text-xs rounded font-medium text-gray-400 hover:text-white transition";
+            }
+            renderDashboardMetrics();
+        }
+
+        function renderDashboardMetrics() {
+            const selectEl = document.getElementById('currencySelect');
+            const selectedOpt = selectEl.options[selectEl.selectedIndex];
+            const currencySymbol = selectedOpt.getAttribute('data-symbol');
+            
+            // Fetch rate from custom numeric input box directly
+            let currentConversionRate = parseFloat(document.getElementById('customRateInput').value);
+            if (isNaN(currentConversionRate) || currentConversionRate <= 0) {
+                currentConversionRate = parseFloat(selectedOpt.getAttribute('data-rate'));
+            }
+
+            if (currentDisplayMode === 'usd') {
+                // USD Mode display overrides
+                document.getElementById('valBalance').innerText = "$" + baseValuesUSD.balance.toFixed(2);
+                document.getElementById('valTask').innerText = "$" + baseValuesUSD.task.toFixed(2);
+                document.getElementById('valAffiliate').innerText = "$" + baseValuesUSD.affiliate.toFixed(2);
+                document.getElementById('valBonus').innerText = "$" + baseValuesUSD.bonus.toFixed(2);
+            } else {
+                // Localised currency mode rendering
+                document.getElementById('valBalance').innerText = currencySymbol + (baseValuesUSD.balance * currentConversionRate).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                document.getElementById('valTask').innerText = currencySymbol + (baseValuesUSD.task * currentConversionRate).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                document.getElementById('valAffiliate').innerText = currencySymbol + (baseValuesUSD.affiliate * currentConversionRate).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                document.getElementById('valBonus').innerText = currencySymbol + (baseValuesUSD.bonus * currentConversionRate).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            }
+
+            // Always update helper indicators beneath metrics
+            const conversionString = `($1.00 USD = ${currentConversionRate.toFixed(2)} ${selectedOpt.value})`;
+            document.getElementById('subBalance').innerText = currentDisplayMode === 'usd' ? `Equivalent to local values` : `($${baseValuesUSD.balance.toFixed(2)} USD value)`;
+            document.getElementById('subTask').innerText = currentDisplayMode === 'usd' ? `Equivalent to local values` : `($${baseValuesUSD.task.toFixed(2)} USD value)`;
+            document.getElementById('subAffiliate').innerText = currentDisplayMode === 'usd' ? `Equivalent to local values` : `($${baseValuesUSD.affiliate.toFixed(2)} USD value)`;
+            document.getElementById('subBonus').innerText = `+20% Active Matrix Sunday Reward`;
+        }
+
+        // Initialize display configuration defaults
+        updateDashboardView();
+
+        // Sync Modal selection field to active Dashboard metrics context
+        function syncModalToDashboardCurrency() {
+            const modalSelect = document.getElementById('modalCountrySelect');
+            const dashboardSelect = document.getElementById('currencySelect');
+            dashboardSelect.value = modalSelect.value;
+            updateDashboardView();
+        }
+
+        // FAQ Accordeon Disclosure Toggles
+        function toggleFaq(id) {
+            const panel = document.getElementById(`faq-ans-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                panel.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Modal Action Windows System Controllers
+        function openModal(type) {
+            const modal = document.getElementById('authModal');
+            const card = document.getElementById('modalCard');
+            const loginSection = document.getElementById('modalTypeLogin');
+            const registerSection = document.getElementById('modalTypeRegister');
+
+            // Toggle target layout sections inside the modal asset frame
+            if (type === 'login') {
+                loginSection.classList.remove('hidden');
+                registerSection.classList.add('hidden');
+            } else {
+                registerSection.classList.remove('hidden');
+                loginSection.classList.add('hidden');
+                // Ensure synchronization of modal choices down to dashboard models
+                document.getElementById('modalCountrySelect').value = document.getElementById('currencySelect').value;
+            }
+
+            // Animate wrapper displays
+            modal.classList.add('modal-active');
+            setTimeout(() => {
+                card.classList.remove('scale-95');
+                card.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('authModal');
+            const card = document.getElementById('modalCard');
+
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.remove('modal-active');
+            }, 150);
+            document.body.style.overflow = '';
+        }
+
+        // Handle submissions smoothly
+        function handleAuthSubmit(e, actionType) {
+            e.preventDefault();
+            closeModal();
+            alert(`Simulation Success: Your lofthela ecosystem ${actionType} parameters have processed correctly! Live system pipelines sync automatically under Goldtech Management rules.`);
+        }
+
+        // Click outside modal wrapper area safely handles window removal
+        document.getElementById('authModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+</body>
+</html>
