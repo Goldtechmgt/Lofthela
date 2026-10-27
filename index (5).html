@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lofthela.online | Global Affiliate & Earning Ecosystem</title>
+    
+    <!-- SEO Metadata -->
+    <meta name="description" content="Earn globally in your local currency or USD by watching videos, chatting, playing games, and completing easy tasks. Join lofthela.online today.">
+    <meta property="og:title" content="lofthela.online | Next-Gen Earning & Learning Platform">
+    <meta property="og:description" content="Earn globally by watching videos, playing chess, reading novels, and completing daily micro-tasks.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon SVG Embedded -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A192F'/%3E%3Cpolygon points='30,75 50,25 70,75 55,75 50,60 45,75' fill='%23F59E0B'/%3E%3Ccircle cx='50' cy='45' r='6' fill='%23FFFFFF'/%3E%3C/svg%3E">
+
+    <!-- Google Fonts & Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            deep: '#0A192F',
+                            card: '#112240',
+                            light: '#233554'
+                        },
+                        gold: {
+                            DEFAULT: '#F59E0B',
+                            hover: '#D97706',
+                            light: '#FEF3C7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0A192F; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #F59E0B; border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-navy-deep text-gray-200 font-sans antialiased custom-scrollbar">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-navy-deep/90 backdrop-blur-md border-b border-navy-light px-6 py-4 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-2xl font-serif font-bold text-gold tracking-wide">lofthela<span class="text-white">.online</span></span>
+            </a>
+            
+            <!-- Quick Auth & Info CTAs -->
+            <div class="flex items-center space-x-4">
+                <a href="#marketplace" class="hidden md:inline-block text-sm text-gray-400 hover:text-gold transition font-medium">Visit Website Info</a>
+                <button onclick="alert('Registration module launching soon!')" class="text-sm px-4 py-2 text-gold border border-gold rounded-lg hover:bg-gold/10 transition font-medium">Register</button>
+                <button onclick="alert('Login window opening soon!')" class="text-sm px-5 py-2 bg-gold text-navy-deep font-semibold rounded-lg hover:bg-gold-hover transition shadow-lg shadow-gold/20">Log In</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top Announcement Sticky Bar -->
+    <div class="bg-gradient-to-r from-gold/20 via-navy-card to-gold/20 text-center py-2 text-xs border-b border-gold/10 tracking-wider text-gold font-medium uppercase px-4">
+        ⚡ Global Multi-Currency Earnings System Active &bull; Convert to USD Anytime ⚡
+    </div>
+
+    <!-- Hero Showcase Header & Countdown -->
+    <header class="relative px-6 pt-16 pb-20 text-center overflow-hidden max-w-5xl mx-auto">
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-96 height-96 bg-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <h1 class="text-4xl sm:text-6xl font-serif font-bold text-white tracking-tight mb-6">
+            The Ultimate Global <br><span class="text-gold bg-gradient-to-r from-gold to-yellow-500 bg-clip-text text-transparent">Affiliate & Task Ecosystem</span>
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            Earn real cash right from your smartphone inside a global platform designed for all skill levels. Complete high-paying microtasks and draw instant multi-currency rewards.
+        </p>
+
+        <!-- Live Universal Countdown Timer Setup -->
+        <div class="bg-navy-card border border-navy-light rounded-2xl p-6 max-w-2xl mx-auto shadow-2xl mb-12">
+            <p class="text-xs uppercase tracking-widest text-gold mb-4 font-semibold">Official Platform Mainnet Launch Countdown</p>
+            <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto">
+                <div class="bg-navy-deep p-3 rounded-xl border border-navy-light">
+                    <span id="days" class="block text-2xl sm:text-4xl font-bold text-white">00</span>
+                    <span class="text-[10px] text-gray-500 uppercase tracking-wider">Days</span>
+                </div>
+                <div class="bg-navy-deep p-3 rounded-xl border border-navy-light">
+                    <span id="hours" class="block text-2xl sm:text-4xl font-bold text-white">00</span>
+                    <span class="text-[10px] text-gray-500 uppercase tracking-wider">Hours</span>
+                </div>
+                <div class="bg-navy-deep p-3 rounded-xl border border-navy-light">
+                    <span id="minutes" class="block text-2xl sm:text-4xl font-bold text-white">00</span>
+                    <span class="text-[10px] text-gray-500 uppercase tracking-wider">Mins</span>
+                </div>
+                <div class="bg-navy-deep p-3 rounded-xl border border-navy-light">
+                    <span id="seconds" class="block text-2xl sm:text-4xl font-bold text-white">00</span>
+                    <span class="text-[10px] text-gray-500 uppercase tracking-wider">Secs</span>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-3 font-medium">Target: November 7, 2026 at 2:00 PM East Africa Time (EAT)</p>
+        </div>
+    </header>
+
+    <!-- Global Multicurrency Interactive Dashboard Section -->
+    <section class="px-6 py-4 max-w-7xl mx-auto mb-20">
+        <div class="bg-gradient-to-b from-navy-card to-navy-deep border border-navy-light rounded-3xl p-6 sm:p-10 shadow-xl relative">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 border-b border-navy-light pb-6 gap-4">
+                <div>
+                    <h2 class="text-2xl font-serif font-bold text-white mb-1">Live Multi-Currency Dashboard Simulator</h2>
+                    <p class="text-sm text-gray-400">Withdraw or review your dashboard in native global currencies or standard US Dollars.</p>
+                </div>
+                <!-- Interactive Toggle State Switcher -->
+                <div class="bg-navy-deep p-1 rounded-xl border border-navy-light inline-flex self-start">
+                    <button id="toggleLocal" onclick="switchCurrency('local')" class="px-4 py-2 rounded-lg text-sm font-semibold transition bg-gold text-navy-deep">Local Currency</button>
+                    <button id="toggleUSD" onclick="switchCurrency('usd')" class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-400 hover:text-white transition">USD Dashboard ($)</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Micro Metrics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-navy-deep/50 p-5 rounded-2xl border border-navy-light/60">
+                    <span class="text-xs font-semibold text-gray-500 uppercase block tracking-wider mb-2">Total Tasks Earned</span>
+                    <div id="statEarnings" class="text-3xl font-bold text-white font-mono">KES 14,850.00</div>
+                    <span class="text-xs text-emerald-500 block mt-1">▲ 12% today</span>
+                </div>
+                <div class="bg-navy-deep/50 p-5 rounded-2xl border border-navy-light/60">
+                    <span class="text-xs font-semibold text-gray-500 uppercase block tracking-wider mb-2">Platform Bonus Pool</span>
+                    <div id="statBonus" class="text-3xl font-bold text-gold font-mono">KES 3,200.00</div>
+                    <span class="text-xs text-gray-400 block mt-1">Affiliate referral milestone</span>
+                </div>
+                <div class="bg-navy-deep/50 p-5 rounded-2xl border border-navy-light/60">
+                    <span class="text-xs font-semibold text-gray-500 uppercase block tracking-wider mb-2">Pending Escrow Tasks</span>
+                    <div id="statPending" class="text-3xl font-bold text-white font-mono">KES 1,120.00</div>
+                    <span class="text-xs text-amber-500 block mt-1">Verification in progress</span>
+                </div>
+                <div class="bg-navy-deep/50 p-5 rounded-2xl border border-navy-light/60">
+                    <span class="text-xs font-semibold text-gray-500 uppercase block tracking-wider mb-2">Completed Tasks</span>
+                    <div class="text-3xl font-bold text-emerald-400 font-mono">482 <span class="text-xs text-gray-400">Items</span></div>
+                    <span class="text-xs text-emerald-500 block mt-1">100% submission rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE FEATURE MATRIX: Real Cash Stream Channels -->
+    <section class="px-6 py-4 max-w-7xl mx-auto mb-24">
+        <div class="text-center mb-16">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold bg-gold/10 px-3 py-1 rounded-full">Diversified Streams</span>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-4 mb-4">High-Yield Earning Channels</h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
+                Discover the fully integrated visual pipelines optimized for immediate worldwide engagement payouts.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Channel 1: Paid Videos -->
+            <div class="bg-navy-card rounded-2xl border border-navy-light overflow-hidden hover:border-gold/30 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-44 bg-navy-light relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80" alt="TikTok and YouTube streaming representation" class="absolute inset-0 w-full height-full object-cover group-hover:scale-105 transition duration-500 opacity-70">
+                        <div class="absolute top-3 left-3 bg-red-600 text-white font-bold text-[10px] px-2 py-0.5 rounded uppercase">Hot</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-gold transition">TikTok & YouTube Views</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Watch targeted short videos and community streams to secure automated timeline payments.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-navy-light/40 flex justify-between items-center text-xs font-medium text-gold">
+                    <span>Est. Reward Rate</span>
+                    <span class="font-mono bg-navy-deep px-2 py-1 rounded text-white border border-navy-light">High Payout</span>
+                </div>
+            </div>
+
+            <!-- Channel 2: Answering Questions -->
+            <div class="bg-navy-card rounded-2xl border border-navy-light overflow-hidden hover:border-gold/30 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-44 bg-navy-light relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Questionnaires and user responses" class="absolute inset-0 w-full height-full object-cover group-hover:scale-105 transition duration-500 opacity-70">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-gold transition">Answering Questions</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Complete survey pools, query answers, and consumer intelligence briefs seamlessly.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-navy-light/40 flex justify-between items-center text-xs font-medium text-gold">
+                    <span>Est. Reward Rate</span>
+                    <span class="font-mono bg-navy-deep px-2 py-1 rounded text-white border border-navy-light">Variable Rate</span>
+                </div>
+            </div>
+
+            <!-- Channel 3: Chatting with Foreigners -->
+            <div class="bg-navy-card rounded-2xl border border-navy-light overflow-hidden hover:border-gold/30 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-44 bg-navy-light relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Global digital chat networks" class="absolute inset-0 w-full height-full object-cover group-hover:scale-105 transition duration-500 opacity-70">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-gold transition">Global Chat Hubs</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Engage in global language assistance chats, cross-border social panels, and virtual forums.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-navy-light/40 flex justify-between items-center text-xs font-medium text-gold">
+                    <span>Est. Reward Rate</span>
+                    <span class="font-mono bg-navy-deep px-2 py-1 rounded text-white border border-navy-light">Per Min Rates</span>
+                </div>
+            </div>
+
+            <!-- Channel 4: Draft & Chess Games -->
+            <div class="bg-navy-card rounded-2xl border border-navy-light overflow-hidden hover:border-gold/30 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-44 bg-navy-light relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=600&q=80" alt="Chess boards and competitive match setups" class="absolute inset-0 w-full height-full object-cover group-hover:scale-105 transition duration-500 opacity-70">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-gold transition">Draft & Chess Matches</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Put your strategy skills to work. Face opponents globally to unlock tournament-grade payouts.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-navy-light/40 flex justify-between items-center text-xs font-medium text-gold">
+                    <span>Est. Reward Rate</span>
+                    <span class="font-mono bg-navy-deep px-2 py-1 rounded text-white border border-navy-light">Skill Bonused</span>
+                </div>
+            </div>
+
+            <!-- Channel 5: Lucky Spins -->
+            <div class="bg-navy-card rounded-2xl border border-navy-light overflow-hidden hover:border-gold/30 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-44 bg-navy-light relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=600&q=80" alt="Lucky wheel or spin interface asset" class="absolute inset-0 w-full height-full object-cover group-hover:scale-105 transition duration-500 opacity-70">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-gold transition">Lucky Spin Wheels</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Spin the randomized platform wheels daily to grab instant token boosts and multipliers.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-navy-light/40 flex justify-between items-center text-xs font-medium text-gold">
+                    <span>Est. Reward Rate</span>
+                    <span class="font-mono bg-navy-deep px-2 py-1 rounded text-white border border-navy-light">Instant Win</span>
+                </div>
+            </div>
+
+            <!-- Channel 6: Clicking Ads -->
+            <div class="bg-navy-card rounded-2xl border border-navy-light overflow-hidden hover:border-gold/30 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-44 bg-navy-light relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Digital web clicks ads interface" class="absolute inset-0 w-full height-full object-cover group-hover:scale-105 transition duration-500 opacity-70">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-gold transition">Clicking Ad Campaigns</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Interact with verified advertiser banners and promotional landers to generate residual flow.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-navy-light/40 flex justify-between items-center text-xs font-medium text-gold">
+                    <span>Est. Reward Rate</span>
+                    <span class="font-mono bg-navy-deep px-2 py-1 rounded text-white border border-navy-light">Per Click Fix</span>
+                </div>
+            </div>
+
+            <!-- Channel 7: Reading Novels -->
+            <div class="bg-navy-card rounded-2xl border border-navy-light overflow-hidden hover:border-gold/30 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-44 bg-navy-light relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="E-reading novel and book catalog" class="absolute inset-0 w-full height-full object-cover group-hover:scale-105 transition duration-500 opacity-70">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-gold transition">Reading Novels</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Review modern authors, read episodic fiction web novels, and secure completion milestone metrics.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-navy-light/40 flex justify-between items-center text-xs font-medium text-gold">
+                    <span>Est. Reward Rate</span>
+                    <span class="font-mono bg-navy-deep px-2 py-1 rounded text-white border border-navy-light">Per Chapter</span>
+                </div>
+            </div>
+
+            <!-- Channel 8: Affiliate Actions -->
+            <div class="bg-navy-card rounded-2xl border border-navy-light overflow-hidden hover:border-gold/30 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-44 bg-navy-light relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Corporate team growth networking" class="absolute inset-0 w-full height-full object-cover group-hover:scale-105 transition duration-500 opacity-70">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-gold transition">Affiliate Referrals</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Invite members globally and generate passive, multi-tier commission structures instantly.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2 border-t border-navy-light/40 flex justify-between items-center text-xs font-medium text-gold">
+                    <span>Est. Reward Rate</span>
+                    <span class="font-mono bg-navy-deep px-2 py-1 rounded text-white border border-navy-light">Passive Commissions</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FUTURE ECOSYSTEM VISIONS GRID -->
+    <section id="marketplace" class="px-6 py-12 max-w-7xl mx-auto border-t border-navy-light mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <span class="text-xs font-bold text-gold uppercase tracking-widest block mb-2">Ecosystem Vision Map</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">Integrated Learning & Marketplace Hub</h2>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    lofthela.online is building beyond simple microtasks. We are integrating advanced knowledge spaces, peer communities, and robust product hubs directly into your global profile.
+                </p>
+                <div class="flex items-center space-x-4">
+                    <a href="https://lofthela.online" target="_blank" class="inline-flex items-center text-xs bg-navy-light hover:bg-gold hover:text-navy-deep px-4 py-2.5 rounded-lg text-white font-semibold transition border border-gold/20">
+                        Visit Main Domain for Info
+                        <svg class="w-3.5 h-3.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- AI Learning -->
+                <div class="bg-navy-card p-6 rounded-2xl border border-navy-light/80">
+                    <div class="text-gold font-bold text-lg mb-2 flex items-center">
+                        <span class="mr-2">🤖</span> AI Smart Lessons
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Access AI-driven tailored courses designed to upgrade digital skills and technical monetization mastery.
+                    </p>
+                </div>
+                <!-- Online Courses -->
+                <div class="bg-navy-card p-6 rounded-2xl border border-navy-light/80">
+                    <div class="text-gold font-bold text-lg mb-2 flex items-center">
+                        <span class="mr-2">🎓</span> Online Academy
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Structured learning pathways covering digital marketing, high-ticket commissions, and platform mastery.
+                    </p>
+                </div>
+                <!-- Mentorship -->
+                <div class="bg-navy-card p-6 rounded-2xl border border-navy-light/80">
+                    <div class="text-gold font-bold text-lg mb-2 flex items-center">
+                        <span class="mr-2">🤝</span> Member Circles
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Connect with seasoned international earners and mentors who map workflows to ensure optimal retention.
+                    </p>
+                </div>
+                <!-- Marketplace -->
+                <div class="bg-navy-card p-6 rounded-2xl border border-navy-light/80">
+                    <div class="text-gold font-bold text-lg mb-2 flex items-center">
+                        <span class="mr-2">🛍️</span> Member Marketplace
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Buy, sell, or swap valuable community resources, tool access profiles, and exclusive templates.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER STACK -->
+    <footer class="bg-navy-card border-t border-navy-light py-12 px-6 text-center text-sm text-gray-500 relative">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <p>&copy; 2026 lofthela.online. Engineering Global Financial Inclusion Architecture.</p>
+            <div class="flex space-x-6">
+                <a href="https://lofthela.online" target="_blank" class="hover:text-gold transition text-xs font-semibold">Official Domain Portal</a>
+                <a href="#" class="hover:text-gold transition text-xs">Terms of Service</a>
+                <a href="#" class="hover:text-gold transition text-xs">Privacy Framework</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY FLOATING WHATSAPP ASSISTANCE FLOATER -->
+    <a href="https://wa.me/1234567890?text=Hello%20lofthela.online%20Support!%20I'm%20interested%20in%20learning%20more." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba59] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 group"
+       title="Connect with Chat Support on WhatsApp">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-11.336c.21-.115 1.246-.615 1.439-.684.192-.069.333-.104.472.104.139.208.538.684.66 1.201.12.192.24.218.45.104.21-.115.888-.327 1.692-1.045.626-.558 1.048-1.248 1.171-1.457.121-.208.013-.321-.092-.435-.094-.103-.21-.245-.316-.367-.104-.122-.139-.208-.069-.347.069-.139.035-.26-.017-.367-.052-.104-.472-1.136-.646-1.556-.17-.408-.344-.352-.472-.358l-.403-.008c-.139 0-.366.052-.558.26-.192.208-.733.717-.733 1.748 0 1.03.75 2.025.854 2.162.104.138 1.476 2.254 3.576 3.159.499.215.889.344 1.192.44.502.159.96.137 1.321.083.403-.06 1.246-.509 1.421-1.002.175-.492.175-.915.122-1.002-.052-.087-.192-.139-.403-.245z"/>
+        </svg>
+        <span class="absolute right-14 bg-navy-card border border-navy-light text-white text-xs px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl pointer-events-none">
+            Chat Support Active
+        </span>
+    </a>
+
+    <!-- WIDGET CONTROLLER SCRIPTS -->
+    <script>
+        // Multi-currency simulator configurations
+        const exchangeRate = 0.0078; // Mock conversion rate: 1 KES = 0.0078 USD
+        const currencyState = {
+            local: {
+                earnings: "KES 14,850.00",
+                bonus: "KES 3,200.00",
+                pending: "KES 1,120.00"
+            },
+            usd: {
+                earnings: "$115.83",
+                bonus: "$24.96",
+                pending: "$8.74"
+            }
+        };
+
+        function switchCurrency(type) {
+            const btnLocal = document.getElementById('toggleLocal');
+            const btnUSD = document.getElementById('toggleUSD');
+            
+            if(type === 'local') {
+                btnLocal.className = "px-4 py-2 rounded-lg text-sm font-semibold transition bg-gold text-navy-deep";
+                btnUSD.className = "px-4 py-2 rounded-lg text-sm font-semibold text-gray-400 hover:text-white transition";
+                
+                document.getElementById('statEarnings').innerText = currencyState.local.earnings;
+                document.getElementById('statBonus').innerText = currencyState.local.bonus;
+                document.getElementById('statPending').innerText = currencyState.local.pending;
+            } else {
+                btnUSD.className = "px-4 py-2 rounded-lg text-sm font-semibold transition bg-gold text-navy-deep";
+                btnLocal.className = "px-4 py-2 rounded-lg text-sm font-semibold text-gray-400 hover:text-white transition";
+                
+                document.getElementById('statEarnings').innerText = currencyState.usd.earnings;
+                document.getElementById('statBonus').innerText = currencyState.usd.bonus;
+                document.getElementById('statPending').innerText = currencyState.usd.pending;
+            }
+        }
+
+        // Live targeted countdown calculator (Target EAT: Nov 7, 2026, 14:00:00 UTC+3)
+        const targetDate = new Date("Nov 7, 2026 14:00:00 GMT+0300").getTime();
+
+        const timerInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                clearInterval(timerInterval);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+</html>
